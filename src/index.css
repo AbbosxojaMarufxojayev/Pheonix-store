@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root{
+  --bg: #DA002B;
+  --bg-py: #FFD740;
+  --bg-light: #F2F2F2;
+}
+/* body{
+  user-select: none;
+} */

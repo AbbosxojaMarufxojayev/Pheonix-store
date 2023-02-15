@@ -1,0 +1,192 @@
+.nav__container{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 6px #0001;
+    z-index: 10;
+}
+.navbar{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav__logo{
+    user-select: none;
+    font-size: 36px;
+    font-family: cursive;
+    color: var(--bg);
+}
+.nav__search{
+    flex: 1;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    background: var(--bg-light);
+}
+.nav__search input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-indent: 16px;
+}
+.nav__search button{
+    width: 60px;
+    background: var(--bg);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.nav__item{
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+.nav__circle{
+    position: absolute;
+    top: -4px;
+    right: 6px;
+    font-size: 12px;
+    color: #fff;
+    background: var(--bg);
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+.nav__item:hover{
+    color: var(--bg);
+}
+.nav__item svg{
+    font-size: 26px;
+}
+.nav__item p{
+    font-size: 14px;
+}
+.nav__katalog{
+    padding: 8px 20px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav__items{
+    display: flex;
+    gap: 30px;
+}
+
+/* Login panel */
+.nav__shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0006;
+    z-index: 11;
+}
+.nav__login{
+    width: 350px;
+    min-height: 360px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    border-radius: 15px;
+    padding: 20px;
+}
+.nav__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.nav__login h2{
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.phone{
+    margin-top: 50px;
+    font-size: 19px;
+    opacity: 0.6;
+}
+.inputs{
+    display: flex;
+    margin-top: 10px;
+}
+.first__input input{
+    width: 80px;
+    height: 45px;
+    font-size: 18px;
+    text-indent: 13px;
+    border-radius: 10px 0 0 10px;
+}
+.sec__input input{
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0;
+}
+.tasdiqlash{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-top: 40px;
+    border: 2px solid violet;
+    color: #fff;
+    background: violet;
+    transition: .3s;
+}
+.tasdiqlash:hover{
+    color: violet;
+    background: #fff;
+    border: 2px solid violet;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .nav__items{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        justify-content: space-around;
+        background: #fff;
+        box-shadow: 0 -2px 6px #0001;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .navbar{
+        flex-wrap: wrap;
+        gap: 5px;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .nav__logo{
+        width: 100%;
+        text-align: center;
+    }
+    .nav__katalog span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .nav__login{
+        width: 90%;
+    }
+}

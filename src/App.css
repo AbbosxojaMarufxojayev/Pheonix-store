@@ -1,0 +1,29 @@
+.container{
+    width: 1280px;
+    height: 100%;
+    margin: auto;
+}
+.btn{
+    padding: 5px;
+    border-radius: 6px;
+    outline: none;
+}
+a{
+    /* inherit - otasidan meros oladi */
+    color: inherit;
+    text-decoration: inherit;
+}
+li{
+    list-style: none;
+}
+
+
+
+
+
+
+@media screen and (max-width:1280px) {
+    .container{
+        width: 96%;
+    }
+}

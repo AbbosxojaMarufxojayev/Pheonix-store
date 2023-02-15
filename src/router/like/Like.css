@@ -1,0 +1,86 @@
+.like{
+    min-height: 500px;
+}
+.like__card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    box-shadow: 5px 5px 5px 5px #0006;
+    width: 90%;    
+    height: 150px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+.two{
+    display: flex;
+    flex-direction: column;
+}
+.like__imgs{
+    width: 100px;
+    height: 100px;
+}
+.like__btn{
+    display: flex;
+    flex-direction: column;
+}
+.like__btn2{
+    padding: 9px 30px;
+    border-radius: 10px;
+    background: dodgerblue;
+    border: none;
+    color: #fff;
+    margin-top: -5px;
+    transition: .3s;
+}
+.like__btn2:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.like__btn3{
+    padding: 9px 30px;
+    border-radius: 10px;
+    background: red;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+    transition: .3s;
+}
+.like__btn3:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .like__card{
+        justify-content: space-between;
+    } 
+}
+
+@media screen and (max-width: 924px) {
+    .like__card{
+        flex-direction: column;
+        height: auto;
+        padding: 20px 30px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .like__card{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .like__card{    
+        width: 90%;
+    }
+}

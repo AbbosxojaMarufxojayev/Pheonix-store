@@ -1,0 +1,147 @@
+.total__price{
+    text-align: center;
+    margin-top: 20px;
+    font-family: cursive;
+}
+.cart{
+    width: 100%;
+    height: auto;
+}
+.the__biggest__cart{
+    width: 90%;
+    height: auto;
+    display: grid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 14px 3px #0004;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px auto;
+}
+.img__part_inner{
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    display: flex;
+}
+.img__part_inner img{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
+.inner__container_cart{
+    width:100%;
+    height: 150px;
+}
+.inner__first__part{
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+}
+.name__cart{
+    text-align: center;
+    font-size: 25px;
+}
+.price__cart{
+    font-size: 20px;
+    margin-top: 5px;
+    color: dodgerblue;
+}
+.inner__sec__part{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dec{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+.qty{
+    font-size: 20px;
+    margin: 0 20px;
+}
+.inc{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+.buttons__container__cart{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.buy__cart{
+    width: 130px;
+    height: 35px;
+    border: none;
+    color: #fff;
+    background: rgb(30, 184, 30);
+    border-radius: 15px;
+    transition: .3s;
+}
+.buy__cart:hover{
+    border: 1px solid rgb(30, 184, 30);
+    cursor: pointer;
+    color: rgb(30, 184, 30);
+    background: #fff;
+}
+.liked__ones{
+    width: 130px;
+    height: 35px;
+    border: none;
+    color: #fff;
+    background: red;
+    border-radius: 15px;
+    transition: .3s;
+}
+.liked__ones svg{
+    transform: translateY(2px);
+}
+.liked__ones:hover{
+    border: 1px solid red;
+    cursor: pointer;
+    color: red;
+    background: #fff;
+}
+.delete{
+    width: 130px;
+    height: 35px;
+    border: none;
+    color: #fff;
+    background: black;
+    border-radius: 15px;
+    transition: .3s;
+}
+.delete:hover{
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 666px) {
+    .the__biggest__cart{
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 542px) {
+    .the__biggest__cart{
+        width: 90%;
+    }
+}

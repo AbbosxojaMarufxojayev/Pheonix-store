@@ -1,0 +1,348 @@
+.footer{
+    width: 100%;
+    background: var(--bg-light);
+}
+.footer__top{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+}
+.first__part1{
+    width: 100%;
+    height: 300px;
+    background: var(--bg-light);
+    padding: 20px 70px;
+}
+.first__part1 h2{
+    width: 100%;
+    font-size: 18px;
+}
+.second__part1{
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+}
+.second__part1 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.icons__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.play__market1,
+.play__market2,
+.play__market3{
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+    margin: 10px;
+    background: #fff;
+}
+.play__market1 img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+.play__market2 img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+.play__market3 img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.footer__middle{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--bg-light);
+}
+.first__part__middle{
+    width: 100%;
+    height: 100%;
+    padding: 40px 5px;
+}
+.sec__part__middle{
+    width: 100%;
+    height: 100%;
+    padding: 60px 5px;
+}
+.third__part__middle{
+    width: 100%;
+    height: 100%;
+    padding: 95px 20px;
+}
+.forth__part__middle{
+    width: 100%;
+    height: 100%;
+    padding: 80px 10px;
+}
+.olcha{
+    font-size: 50px;
+    font-family: cursive;
+    color: var(--bg);
+}
+.support{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.phone__number{
+    font-size: 20px;
+    font-weight: 600;
+}
+.location{
+    margin-top: 15px;
+}
+.location span{
+    font-size: 18px;
+    transition: .4s;
+}
+.location svg{
+    font-size: 20px;
+    transform: translateY(3px);
+}
+.location span:hover{
+    cursor: pointer;
+    color: var(--bg);
+}
+.envelope{
+    margin-top: 15px;
+}
+.envelope span{
+    font-size: 18px;
+    transition: .4s;
+}
+.envelope svg{
+    font-size: 20px;
+    transform: translateY(5px);
+}
+.envelope span:hover{
+    cursor: pointer;
+    color: var(--bg);
+}
+.information{
+    color: var(--bg);
+    cursor: pointer;
+    font-family: cursive;
+}
+.collection{
+    list-style: none;
+    margin-top: 25px;
+}
+.item{
+    margin-top: 15px;
+    transition: .3s;
+}
+.item:hover{
+    cursor: pointer;
+    color: var(--bg);
+}
+.collection2{
+    list-style: none;
+    margin-top: 25px;
+}
+.item2{
+    margin-top: 15px;
+    transition: .3s;
+}
+.item2:hover{
+    cursor: pointer;
+    color: var(--bg);
+}
+.item:hover .arrow__right{
+    display: inline;
+}
+.item2:hover .arrow__right{
+    display: inline;
+}
+.arrow__right{
+    display: none;
+}
+.img__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.img__card{
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    background: #fff;
+    transition: .3s;
+}
+.img__card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.img__card:hover{
+    cursor: pointer;
+    background: #0005;
+}
+.footer__bottom{
+    width: 100%;
+    height: auto;
+    background: var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first__container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+.sec__container{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sec__container svg{
+    font-size: 25px;
+}
+.first__container p{
+    font-size: 18px;
+    color: gray;
+}
+
+@media screen and (max-width: 1116px) {
+    .footer__middle{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__middle{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .first__container{
+        font-size: 13px;
+        justify-content: space-between;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 944px) {
+    .first__part1 h2{
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .first__container{
+        width: 80%;
+    }
+    .first__container p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .footer__top{
+        grid-template-columns: 1fr;
+    }
+    .second__part1 img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .sec__container{
+        justify-content: space-between;
+    }
+    .footer__middle{
+        grid-template-columns: 1fr;
+    }
+    .first__part__middle{
+        padding: 20px 5px;
+    }
+    .sec__part__middle{
+        padding: 20px 5px;
+    }
+    .third__part__middle{
+        padding: 20px 5px;
+    }
+    .img__container{
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .first__container p{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .first__container{
+        flex-direction: column;
+    }
+    .sec__container{
+        width: 17%;
+    }
+}
+
+@media screen and (max-width: 534px) {
+    .img__container{
+        margin-left: 50px;
+    }
+    .sec__container{
+        width: 21%;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .second__part1 img{
+        height: 300px;
+    }
+    .img__container{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .second__part1 img{
+        height: 250px;
+    }
+    .second__part1{
+        margin-top: 60px;
+    }
+    .sec__container{
+        width: 30%;
+    }
+    .img__container{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 354px) {
+    .second__part1 img{
+        height: 190px;
+    }
+}

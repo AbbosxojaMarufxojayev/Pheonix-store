@@ -1,0 +1,122 @@
+.products__container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-top: 40px;
+}
+.products__cards{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.products__cards:hover{
+    cursor: pointer;
+}
+.products_img__part{
+    width: 100%;
+    height: 45%;
+}
+.products_img__part img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.products_text__part{
+    width: 100%;
+    height: 55%;
+    padding-top: 30px;
+}
+.name{
+    text-align: center;
+    font-size: 20px;
+    min-height: 40px;
+}
+.price{
+    text-align: center;
+    font-size: 19px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.credit__btn{
+    padding: 10px 15px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+.products__btn{
+    width: 80%;
+    height: 35px;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    margin-top: 17px;
+    border: none;
+    transition: .3s;
+    text-align: center;
+    padding-bottom: 3px;
+    font-size: 15px;
+}
+.products__btn:hover{
+    cursor: pointer;
+    border: 2px solid gold;
+    background: #fff;
+}
+.products__btn svg{
+    font-size: 17px;
+    margin-right: 7px;
+}
+.like__icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+.like__icon svg{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1030px) {
+    .products__container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 808px) {
+    .products__container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 534px) {
+    .products__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+    .products__cards{
+        width: auto;
+        height: auto;
+        margin: 0;
+        position: relative;
+    }
+    .like__icon svg{
+        font-size: 18px;
+    }
+    .like__icon{
+        top: 10px;
+        right: 3px;
+    }
+}

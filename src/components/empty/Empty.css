@@ -1,0 +1,10 @@
+.empty{
+    text-align: center;
+    padding-top: 80px;
+}
+.empty img{
+    width: 150px;
+}
+.empty svg{
+    font-size: 100px;
+}
