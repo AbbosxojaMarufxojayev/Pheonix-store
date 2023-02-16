@@ -62,7 +62,7 @@ function CartItem({karzinka}) {
                   <button className='delete' onClick={()=> dispatch({type: REMOVE_CART, payload: item.id})}>O'chirish</button>
                 </div>
             </div>)
-        }
+        } 
 
         
     </div>

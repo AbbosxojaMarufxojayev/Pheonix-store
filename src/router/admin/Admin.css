@@ -1,0 +1,36 @@
+.admin{
+    height: 100vh;
+    display: flex; 
+}
+.admin__sidebar{
+    width: 300px;
+    height: 100%;
+    background: dodgerblue;
+    padding: 46px;
+}
+.admin__content{
+    padding: 30px;
+}
+.collection__sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sidebar__name{
+    margin-bottom: 20px;
+    color: #fff;
+}
+.item__sidebar svg{
+    transform: translateY(4px);
+    margin-right: 10px;
+    font-size: 20px;
+    transition: .2s;
+}
+.item__sidebar:hover{
+    color: var(--bg);
+}
+.item__sidebar{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}

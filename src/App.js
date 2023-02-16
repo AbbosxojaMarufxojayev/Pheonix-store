@@ -8,6 +8,7 @@ import Like from "./router/like/Like"
 import Compare from './router/compare/Compare';
 import Footer from './components/footer/Footer';
 import SingleRoute from './components/single-route/SingleRoute';
+import Admin from './router/admin/Admin';
 import { useSelector } from "react-redux"
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/compare' element={<Compare/>}/>
         <Route path='/like' element={<Like karzinka={cart}/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/admin/*' element={<Admin/>}/>
         <Route path='/products/:id' element={<SingleRoute karzinka={cart}/>}/>
       </Routes>
       <Footer/>

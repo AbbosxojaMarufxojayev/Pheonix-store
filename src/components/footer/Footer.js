@@ -17,7 +17,14 @@ import { BsArrowRightShort } from "react-icons/bs"
 import { FaFacebook } from "react-icons/fa"
 import { BsInstagram, BsTelegram } from "react-icons/bs"
 
+import { useLocation } from "react-router-dom"
+
 function Footer() {
+  const { pathname } = useLocation()
+  if(pathname.includes("admin")){
+    return <></>
+  }
+
   return (
     <div className='footer'>
         <div className="container">

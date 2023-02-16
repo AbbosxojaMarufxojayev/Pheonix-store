@@ -47,13 +47,7 @@ function SingleRoute({karzinka}) {
         </div>
         <div className="second__part">
             <h1 className='name__single'>{oneItem?.title}</h1>
-            <div className="description">{oneItem?.desc[0]}</div>
-            <div className="description">{oneItem?.desc[1]}</div>
-            <div className="description">{oneItem?.desc[3]}</div>
-            <div className="description">{oneItem?.desc[4]}</div>
-            <div className="description">{oneItem?.desc[5]}</div>
-            <div className="description">{oneItem?.desc[6]}</div>
-            <div className="description">{oneItem?.desc[7]}</div>
+            <div className="description">{oneItem?.desc}</div>
         </div>
         <div className="third__part">
             <p className="price__single">{oneItem?.price.brm()} so'm</p>
