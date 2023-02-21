@@ -1,0 +1,40 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+form input{
+    width: 400px;
+    height: 40px;
+    text-indent: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+form select{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    text-indent: 20px;
+    font-size: 16px;
+}
+.product__name{
+    text-align: center;
+    margin-bottom: 20px;
+    color: dodgerblue;
+}
+.btn__create__pro{
+    width: 150px;
+    border: none;
+    height: 40px;
+    border-radius: 15px;
+    background: dodgerblue;
+    color: #fff;
+    transition: .3;
+}
+.btn__create__pro:hover{
+    cursor: pointer;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    background: #fff;
+}

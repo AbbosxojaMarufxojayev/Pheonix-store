@@ -9,6 +9,8 @@ import { MdOutlineManageSearch, MdOutlineAdminPanelSettings } from "react-icons/
 import { GiScales } from "react-icons/gi"
 import { BsCart2 } from "react-icons/bs"
 import { FiSettings } from "react-icons/fi"
+import CreateCategory from './create-category/CreateCategory'
+import ManageCategory from "./manage-category/ManageCategory"
 
 
 function Admin() {
@@ -20,10 +22,11 @@ function Admin() {
           <li className="item__sidebar"><NavLink to={"/"}><AiOutlineHome/> Home</NavLink></li>
           <li className="item__sidebar"><NavLink to={"create-product"}><IoMdCreate/> Create product</NavLink></li>
           <li className="item__sidebar"><NavLink to={"manage-product"}><MdOutlineManageSearch/> Manage product</NavLink></li>
+          <li className="item__sidebar"><NavLink to={"create-category"}><IoMdCreate/> Create category</NavLink></li>
+          <li className="item__sidebar"><NavLink to={"manage-category"}><MdOutlineManageSearch/> Manage category</NavLink></li>
           <li className="item__sidebar"><NavLink to={"/compare"}><GiScales/> Taqqoslash</NavLink></li>
           <li className="item__sidebar"><NavLink to={"/like"}><AiFillHeart/> Sevimlilar</NavLink></li>
           <li className="item__sidebar"><NavLink to={"/cart"}><BsCart2/> Savatcha</NavLink></li>
-          <li className="item__sidebar"><NavLink><MdOutlineAdminPanelSettings/> Tizim</NavLink></li>
           <li className="item__sidebar"><NavLink><FiSettings/> Sozlamalar</NavLink></li>
         </ul>
       </div>
@@ -31,6 +34,8 @@ function Admin() {
         <Routes>
           <Route path='create-product' element={<CreateProduct/>}/>
           <Route path='manage-product' element={<ManageProduct/>}/>
+          <Route path='/create-category' element={<CreateCategory/>}/>
+          <Route path='/manage-category' element={<ManageCategory/>}/>
         </Routes>
       </div> 
     </div>

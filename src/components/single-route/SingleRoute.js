@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./SingleRoute.css"
 import { PRODUCTS__DATA } from "../../static"
 import { useDispatch, useSelector } from "react-redux"
@@ -7,9 +7,23 @@ import { useParams } from "react-router-dom"
 import { BsHeart } from "react-icons/bs"
 import { ADD_TO_CART } from '../../context/action/actionType'
 
+import { db } from "../../server"
+import { collection, getDocs } from "firebase/firestore"
+
 function SingleRoute({karzinka}) {
     const dispatch = useDispatch()
     const likes = useSelector(s=>s.heart)
+
+    const [ data, setData ] = useState([])
+    const productsColRef = collection(db, "single-route")
+  
+    useEffect(()=>{
+      const getProducts = async () => {
+        const products = await getDocs(productsColRef)
+        setData(products.docs.map((pro)=> ({ ...pro.data(), id: pro.id }) ))
+      }
+      getProducts()
+    }, [])
 
 
     const addHeart = (item)=>{
@@ -33,7 +47,7 @@ function SingleRoute({karzinka}) {
 
 
     const params = useParams()
-    const oneItem = PRODUCTS__DATA?.find(el => el.id === params.id)
+    const oneItem = data?.find(el => el.id === params.id)
   return (
     <div className='single_route'>
         <div className="first__part">
@@ -62,4 +76,4 @@ function SingleRoute({karzinka}) {
   )
 }
 
-export default SingleRoute
+export default SingleRoute    

@@ -21,6 +21,9 @@ import img18 from "../../assets/32.png"
 import img19 from "../../assets/33.png"
 import img20 from "../../assets/foiz.png"
 
+
+
+
 const Category__data = [
   {
     image: img1,
@@ -103,6 +106,9 @@ const Category__data = [
     text: "Qulay takliflar"
   },
 ]
+
+
+
 
 function Category() {
 
