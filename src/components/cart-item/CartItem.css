@@ -124,7 +124,56 @@
     color: black;
     background: #fff;
 }
-
+.inputs__delivery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin-top: 30px;
+    grid-gap: 10px;
+}
+.name__delivery{
+    width: 70%;
+    height: 45px;
+    border-radius: 15px;
+    text-indent: 30px;
+}
+.phone__delivery{
+    width: 70%;
+    height: 45px;
+    border-radius: 15px;
+    text-indent: 30px;
+}
+.address__delivery{
+    width: 70%;
+    height: 45px;
+    border-radius: 15px;
+    text-indent: 30px;
+}
+.desc__delivery{
+    border-radius: 15px;
+    width: 70%;
+    text-indent: 30px;
+    padding-top: 10px;
+}
+.btn__delivery{
+    width: 170px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+    background: dodgerblue;
+    transition: .3s;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.btn__delivery:hover{
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    background: #fff;
+    cursor: pointer;
+}
 
 
 
@@ -136,6 +185,10 @@
     .the__biggest__cart{
         grid-template-columns: 1fr;
         width: 70%;
+    }
+    .inputs__delivery{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
     }
 }
 

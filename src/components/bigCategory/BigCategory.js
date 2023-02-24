@@ -20,14 +20,14 @@ function BigCategory({admin}) {
     getCategory()
   }, [])
 
-  const delCategory = async (id)=>{ 
+  const delCategory = async (id) => {
     await deleteDoc(doc(db, "category", id))
-    .then(res=> {
+    .then(res => {
       console.log(res)
       setRefresh(!refresh)
     })
-    .catch(err=> console.log(err))    
-  } 
+    .catch(err => console.log(err))
+  }
   return (
     <div>
         <div className="bigCategory__container">
@@ -37,7 +37,7 @@ function BigCategory({admin}) {
             <div className="text__part">{el?.name}</div>
             {
               admin ?
-              <button onClick={()=> delCategory(el.id)}>Delete</button>
+              <button className='products__btn' onClick={()=> delCategory(el.id)}>Delete</button>
               :
               <></>
             }

@@ -8,6 +8,7 @@ function CreateCategory() {
   const [urls, setUrls] = useState("")
   const [category, setCategory] = useState("phone")
   const [loading, setLoading] = useState(false)
+  
   const categoryColRef = collection ( db, "category" )
 
   const createHomeBanner = async (e)=>{

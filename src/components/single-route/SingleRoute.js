@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import "./SingleRoute.css"
-import { PRODUCTS__DATA } from "../../static"
 import { useDispatch, useSelector } from "react-redux"
 import { ADD_TO_LIKE} from "../../context/action/actionType"
 import { useParams } from "react-router-dom"
@@ -44,10 +43,13 @@ function SingleRoute({karzinka}) {
         dispatch( {type: ADD_TO_CART, payload: newCart} )
       }
 
+      const params = useParams()
+      const oneItem = data?.find(el => el.id === params.id)
 
 
-    const params = useParams()
-    const oneItem = data?.find(el => el.id === params.id)
+
+
+
   return (
     <div className='single_route'>
         <div className="first__part">

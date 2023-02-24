@@ -52,6 +52,8 @@ function CreateProduct() {
             <option value="tv">TV</option>
             <option value="laptop">Laptop</option>
             <option value="technique">Technique</option>
+            <option value="accessories">Accessories</option>
+            <option value="cars">Cars</option>
           </select>
           <button disabled={loading} className='btn__create__pro' type='submit'>{loading ? "Loading..." : "Create product"}</button>
         </form>

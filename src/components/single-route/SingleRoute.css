@@ -159,6 +159,7 @@
 }
 
 
+
 @media screen and (max-width: 1232px) {
     .single_route{
         grid-template-columns: repeat(2, 1fr);

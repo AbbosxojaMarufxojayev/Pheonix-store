@@ -7,15 +7,30 @@ import {SlBasket} from "react-icons/sl"
 import {BsPerson} from "react-icons/bs"
 import { Link } from 'react-router-dom'
 import { FiX } from "react-icons/fi"
-import { useSelector } from "react-redux"
-import { useLocation } from "react-router-dom"
-
-
-
+import { useSelector, useDispatch } from "react-redux"
+import { useLocation, useNavigate } from "react-router-dom"
+import { LOG_IN } from "../../context/action/actionType"
 
 
 function Navbar() {
   const [ show, setShow ] = useState(false)
+  const [ username, setUsername ] = useState("")
+  const [ password, setPassword ] = useState("")
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+
+  const register = ()=>{
+    if(username === "Pheonix" && password === "pheonix2006"){
+      dispatch({type: LOG_IN, payload: {username, password}})
+      navigate("/admin")
+    }else{
+      console.log("error");
+    }
+  }
+
+
+
   document.body.style.overflow = show ? "hidden" : "auto"
   const cart = useSelector(s=> s.cart)
 
@@ -66,12 +81,11 @@ function Navbar() {
       show ? <>    <div onClick={()=> setShow(false)} className="nav__shadow"></div>
                     <div className="nav__login">
                       <h2>Tizimga kirish yoki profil yaratish</h2>
-                      <p className='phone'>Telefon raqami</p>
                       <div className="inputs">
-                        <div className="first__input"><input type="text" placeholder='+998' /></div>
-                        <div className="sec__input"><input type="text" /></div>
+                        <div className="first__input"><input value={username} onChange={e => setUsername(e.target.value)} required type="text" placeholder='Username' /></div>
+                        <div className="sec__input"><input value={password} onChange={e => setPassword(e.target.value)} required type="password" placeholder='Password' /></div>
                       </div>
-                      <button className="tasdiqlash">Tasdiqlash</button>
+                      <button onClick={register} className="tasdiqlash">Login</button>
                       <FiX onClick={()=> setShow(false)} className='nav__close'/>
                     </div></>
           : <></>
