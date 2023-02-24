@@ -9,15 +9,27 @@ import { Link } from 'react-router-dom'
 import { FiX } from "react-icons/fi"
 import { useSelector, useDispatch } from "react-redux"
 import { useLocation, useNavigate } from "react-router-dom"
-import { LOG_IN } from "../../context/action/actionType"
+import { LOG_IN, LOG_OUT } from "../../context/action/actionType"
 
 
 function Navbar() {
   const [ show, setShow ] = useState(false)
   const [ username, setUsername ] = useState("")
   const [ password, setPassword ] = useState("")
+  const [ error, setError ] = useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  document.body.style.overflow = show ? "hidden" : "auto"
+  const cart = useSelector(s=> s.cart)
+  const auth = useSelector(s => s.auth)
+  
+
+  const defaultState = ()=>{
+    setShow(false)
+    setUsername("")
+    setPassword("")
+    setError(false)
+  }
 
 
   const register = ()=>{
@@ -25,14 +37,29 @@ function Navbar() {
       dispatch({type: LOG_IN, payload: {username, password}})
       navigate("/admin")
     }else{
+      setError(true)
+    }
+  }
+
+  const checkAdmin = ()=>{
+    if(auth){
+      return navigate("/admin")
+    }
+
+    setShow(true)
+  }
+
+  const logOut = ()=>{
+    if(auth === null){
+      dispatch({type: LOG_OUT, payload: {username, password}})
+      navigate("/")
+    }else{
       console.log("error");
     }
   }
 
 
 
-  document.body.style.overflow = show ? "hidden" : "auto"
-  const cart = useSelector(s=> s.cart)
 
   const {pathname} = useLocation()
   if(pathname.includes("admin")){
@@ -68,7 +95,7 @@ function Navbar() {
                 <p>Savatcha</p>
                 <span className='nav__circle'>{cart.length}</span>
               </Link>
-              <div onClick={()=> setShow(true)} className="nav__item">
+              <div onClick={checkAdmin} className="nav__item">
                 <BsPerson/>
                 <p>Kirish</p>
               </div>
@@ -78,15 +105,16 @@ function Navbar() {
     </div>
 
     {
-      show ? <>    <div onClick={()=> setShow(false)} className="nav__shadow"></div>
+      show ? <>    <div onClick={defaultState} className="nav__shadow"></div>
                     <div className="nav__login">
                       <h2>Tizimga kirish yoki profil yaratish</h2>
+                      <span style={{opacity: error ? 1 : 0}} className='error'>Username or password incorrect !</span>
                       <div className="inputs">
                         <div className="first__input"><input value={username} onChange={e => setUsername(e.target.value)} required type="text" placeholder='Username' /></div>
                         <div className="sec__input"><input value={password} onChange={e => setPassword(e.target.value)} required type="password" placeholder='Password' /></div>
                       </div>
                       <button onClick={register} className="tasdiqlash">Login</button>
-                      <FiX onClick={()=> setShow(false)} className='nav__close'/>
+                      <FiX onClick={defaultState} className='nav__close'/>
                     </div></>
           : <></>
     }

@@ -36,3 +36,8 @@
     font-weight: 600;
     color: #fff;
 }
+.log__out{
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+}

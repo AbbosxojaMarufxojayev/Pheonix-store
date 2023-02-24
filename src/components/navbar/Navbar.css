@@ -158,6 +158,17 @@
     border: 2px solid violet;
     cursor: pointer;
 }
+.error{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    user-select: none;
+    color: red;
+    opacity: 0;
+}
+
+
+
 
 @media screen and (max-width:900px) {
     .nav__items{

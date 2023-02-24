@@ -6,6 +6,17 @@ import { ADD_TO_LIKE } from '../../context/action/actionType'
 import { BsHeart } from "react-icons/bs"
 import { Link } from "react-router-dom"
 
+const BOT_TOKEN = "6259790459:AAGg8ZTiFywTDaq8vUlzQxalz2b7AORj6FY"
+const CHAT_ID = "-809539495"
+
+
+// 1. Chatni id sini olish uchun
+// https://api.telegram.org/bot6259790459:AAGg8ZTiFywTDaq8vUlzQxalz2b7AORj6FY/getUpdates
+
+
+// 2. Xabarni chatga yuborish uchun
+// https://api.telegram.org/bot[your_token]/sendMessage?chat_id=[your chat_id]&parse_mode=html
+
 function CartItem({karzinka}) {
     const [ name, setName ] = useState("") 
     const [ phone, setPhone ] = useState("") 
@@ -47,7 +58,24 @@ function CartItem({karzinka}) {
     const cart = useSelector(s => s.cart)
     
     const order = ()=>{
-      console.log( { name, phone, address, description, cart } );
+      let msg = ""
+      msg += `Name: <b>${name}</b> %0A`
+      msg += `Phone: ${phone} %0A`
+      msg += `Address: ${address} %0A`
+      msg += `Description: ${description} %0A`
+
+      msg += "%0A<b>Buyurtmalar</b>%0A%0A"
+      karzinka.forEach((order)=>{
+        msg += `Name: ${order.title} %0A`
+        msg += `Quantity: ${order.qty} %0A`
+        msg += `Price: ${order.price} %0A%0A`
+      })
+
+
+      const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${msg}&parse_mode=html`
+      let api = new XMLHttpRequest();
+      api.open("GET", API_URL, true);
+      api.send();
     }
 
 

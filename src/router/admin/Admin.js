@@ -11,9 +11,15 @@ import { BsCart2 } from "react-icons/bs"
 import { FiSettings } from "react-icons/fi"
 import CreateCategory from './create-category/CreateCategory'
 import ManageCategory from "./manage-category/ManageCategory"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { LOG_OUT } from "../../context/action/actionType"
+
 
 
 function Admin() {
+  const dispatch = useDispatch()
+
   return (
     <div className='admin'>
       <div className="admin__sidebar">
@@ -27,8 +33,8 @@ function Admin() {
           <li className="item__sidebar"><NavLink to={"/compare"}><GiScales/> Taqqoslash</NavLink></li>
           <li className="item__sidebar"><NavLink to={"/like"}><AiFillHeart/> Sevimlilar</NavLink></li>
           <li className="item__sidebar"><NavLink to={"/cart"}><BsCart2/> Savatcha</NavLink></li>
-          <li className="item__sidebar"><NavLink><FiSettings/> Sozlamalar</NavLink></li>
         </ul>
+        <button className='log__out' onClick={()=> dispatch({type: LOG_OUT})}>Log out</button>
       </div>
       <div className="admin__content">
         <Routes>
