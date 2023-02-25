@@ -21,7 +21,7 @@ function CartItem({karzinka}) {
     const [ name, setName ] = useState("") 
     const [ phone, setPhone ] = useState("") 
     const [ address, setAddress ] = useState("") 
-    const [ description, setDescription ] = useState("") 
+    const [ description, setDescription ] = useState("")
 
 
     const dispatch = useDispatch()
@@ -66,7 +66,7 @@ function CartItem({karzinka}) {
 
       msg += "%0A<b>Buyurtmalar</b>%0A%0A"
       karzinka.forEach((order)=>{
-        msg += `Name: ${order.title} %0A`
+        msg += `Name:  ${order.title} %0A`
         msg += `Quantity: ${order.qty} %0A`
         msg += `Price: ${order.price} %0A%0A`
       })
